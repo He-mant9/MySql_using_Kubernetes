@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-sevice
+  namespace: mysql
+  resourceVersion: "11995"
+  selfLink: /apis/apps/v1/namespaces/mysql/services/mysql-service
+  uid: 5d589bc2-064b-4bf4-8b7e-f996fc8f887c
+spec:
+  ports:
+  - name: 8080-3306
+    port: 8080
+    protocol: TCP
+    targetPort: 3306
+  selector:
+    app: db
